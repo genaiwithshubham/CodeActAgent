@@ -20,13 +20,19 @@ import os
 
 # Initialize the agent
 agent = CodeActAgent(
-    model="claude-3-7-sonnet-20250219"
+    model="claude"
 )
 
 # Solve a problem
 query = "Calculate the sum of all even numbers between 1 and 100."
 solution = agent.solve(query)
 print(solution)
+```
+
+## Chainlit Example
+
+```bash
+chainlit run main.py
 ```
 
 ## Configuration Options
@@ -95,7 +101,7 @@ However, be cautious when using the agent with untrusted inputs or in production
 
 - Python 3.10+
 - `litellm` package
-- TODO - chainlit or chat-ui implementation
+- chainlit or chat-ui(TODO) implementation
 
 ## License
 
