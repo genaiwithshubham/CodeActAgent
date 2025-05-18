@@ -12,15 +12,6 @@ A Python implementation of thought-execute-observe pattern(CodeAct) for problem-
 
 This cycle repeats until the problem is solved or a maximum number of iterations is reached.
 
-## Features
-
-- 🧠 **Structured Reasoning**: Clear thought-execute-observe pattern for step-by-step problem solving
-- 🔒 **Safe Code Execution**: Isolated execution environment with timeout protection
-- 📊 **Wide Range of Applications**: Suitable for data analysis, algorithm development, scientific computing, and more
-- 🔄 **Iterative Refinement**: Multiple thought cycles allow for debugging and improvement
-- 📝 **Detailed Documentation**: Includes code comments, examples, and prompt engineering guide
-
-
 ## Quick Start
 
 ```python
@@ -81,12 +72,6 @@ Generate some sample data with 3 clusters, visualize the data, apply k-means, an
 """
 ```
 
-## Project Structure
-
-- `codeact_agent.py`: Main implementation of the CodeAct agent
-- `examples.md`: Usage examples showing the agent in action
-- `prompt_engineering_guide.md`: Guide for customizing prompts for different use cases
-
 ## Customizing the Agent
 
 The agent's behavior can be customized by:
@@ -95,8 +80,6 @@ The agent's behavior can be customized by:
 2. Adjusting the maximum number of cycles with the `max_cycles` parameter
 3. Changing the model with the `model` parameter
 
-See the `prompt_engineering_guide.md` file for detailed guidance on customizing the agent's prompts.
-
 ## Safety Considerations
 
 The CodeAct agent executes Python code, which can potentially perform system operations. The implementation includes several safety features:
@@ -104,6 +87,7 @@ The CodeAct agent executes Python code, which can potentially perform system ope
 - Code execution in isolated processes
 - Execution timeouts (default: 30 seconds)
 - Temporary file cleanup
+- TODO: create docker based python jupyter kernel.
 
 However, be cautious when using the agent with untrusted inputs or in production environments.
 
@@ -111,6 +95,7 @@ However, be cautious when using the agent with untrusted inputs or in production
 
 - Python 3.10+
 - `litellm` package
+- TODO - chainlit or chat-ui implementation
 
 ## License
 
@@ -123,10 +108,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Acknowledgments
 
 This project was inspired by:
-- ReAct (Reasoning + Acting) pattern
-- Chain-of-thought prompting techniques
-- Code as a form of reasoning in AI systems
-
----
-
-For more information, check out the examples and prompt engineering guide included in the project.
+- [Executable Code Actions Elicit Better LLM Agents](https://arxiv.org/abs/2402.01030) Paper.
+- [Code Act Official Repo](https://github.com/xingyaoww/code-act)
